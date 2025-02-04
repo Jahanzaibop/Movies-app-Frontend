@@ -11,7 +11,7 @@ export default function  UserState ({children}) {
 
         try {
             const response = await axios.post(
-                'http://localhost:8000/api/v1/users/auth',
+                'https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/users/auth',
                 user,
                 {
                     withCredentials: true // Ensure cookies are sent and received
