@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Hide scrollbar when not needed */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Hide track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #555; /* Scrollbar color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Scrollbar hover effect */
+}

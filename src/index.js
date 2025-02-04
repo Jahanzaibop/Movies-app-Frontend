@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './styles.css'; // Import your styles
+import UserState from './Context/userContext';
+import MovieState from './Context/movieContext';
+import AdminState from './Context/adminContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AdminState>
+    <UserState>
+    <MovieState>  
     <App />
+    </MovieState>
+    </UserState>
+    </AdminState>
+    
   </React.StrictMode>
 );
 
