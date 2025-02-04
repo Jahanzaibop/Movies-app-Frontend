@@ -7,24 +7,26 @@ export default function  UserState ({children}) {
   
     const [currentuser , setCurrentUser] = useState(JSON.parse(localStorage.getItem('currentuser')) || null)
 
-    const login = async (user) =>{
-
+    const login = async (user) => {
         try {
             const response = await axios.post(
                 'https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/users/auth',
                 user,
-                {
-                    withCredentials: true // Ensure cookies are sent and received
-                }
+                { withCredentials: true }
             );
-            setCurrentUser(response.data); // Set current user in context or state
-            return response.data
+            
+            if (response.data) {
+                setCurrentUser(response.data); 
+                return response.data; // Ensure data is returned
+            } else {
+                throw new Error("Invalid response data");
+            }
+        } catch (error) {
+            console.error("Login Error:", error.response ? error.response.data : error.message);
+            return null; // Return null on error
         }
-        catch(error){
-            console.error(error);
-        }
-        
-    }
+    };
+    
 
     const logOut = async () =>{
 

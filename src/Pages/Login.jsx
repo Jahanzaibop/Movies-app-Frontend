@@ -23,33 +23,32 @@ const navigate = useNavigate();
     }
 
 
-    const handleClick = async e =>{
-        e.preventDefault();
-
-        if(!input.email || !input.password) return toast.error("All Fields Are required");
-
-       try{
-        const userData = await login(input)
-      
-        toast.success("Logged In Sucessfully")
-        if(userData.isAdmin){
-          setTimeout(()=> navigate('/admin/dashboard'), 1500)
-        }
-
-        else{
-          setTimeout(()=> navigate('/'), 1500)
-        }
-       
-       
-    }
-
-       catch(error){
-        console.error(error);
-       }
-        
-
-    }
-
+    const handleClick = async e => {
+      e.preventDefault();
+  
+      if (!input.email || !input.password) {
+          return toast.error("All Fields Are required");
+      }
+  
+      try {
+          const userData = await login(input);
+  
+          if (!userData) {
+              return toast.error("Login failed. Please check your credentials.");
+          }
+  
+          toast.success("Logged In Successfully");
+  
+          if (userData.isAdmin) {
+              setTimeout(() => navigate('/admin/dashboard'), 1500);
+          } else {
+              setTimeout(() => navigate('/'), 1500);
+          }
+      } catch (error) {
+          console.error(error);
+      }
+  };
+  
 
 
   return (
