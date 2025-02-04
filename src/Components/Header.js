@@ -149,10 +149,10 @@ const Header = () => {
               </>
             ) : (
               <ul className="flex items-end justify-end">
-                <li className="p-[5px] bg-white rounded-md font-extrabold max-w-[150px] w-full text-center mr-[10px]">
+                <li className="p-[5px] bg-white rounded-md font-extrabold max-w-[100px] sm:max-w-[150px] w-full text-center mr-[10px]">
                   <Link to="/register">Register</Link>
                 </li>
-                <li className="p-[5px] bg-white rounded-md font-extrabold max-w-[150px] w-full text-center">
+                <li className="p-[5px] bg-white rounded-md font-extrabold max-w-[100px] sm:max-w-[150px] w-full text-center">
                   <Link to="/login">Login</Link>
                 </li>
               </ul>
