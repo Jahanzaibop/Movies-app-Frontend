@@ -60,7 +60,7 @@ const Addmovies = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8000/api/v1/movies/add-movie",
+        "https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/add-movie",
         input,
         {
           headers: {

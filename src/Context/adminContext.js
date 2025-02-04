@@ -18,7 +18,7 @@ export default function AdminState({ children }) {
     if (movieId) {
       const fetchReviews = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/api/v1/movies/${movieId}/reviews`);
+          const response = await axios.get(`https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/${movieId}/reviews`);
           
           setReviews(response.data);
         } catch (error) {

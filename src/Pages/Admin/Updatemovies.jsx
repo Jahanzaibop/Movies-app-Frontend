@@ -74,7 +74,7 @@ const UpdateMovies = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:8000/api/v1/movies/update-movie/${id}`,
+        `https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/update-movie/${id}`,
         input,
         {
           headers: {

@@ -61,7 +61,7 @@ const Moviedetails = () => {
     }
 
     try {
-      await axios.post(`http://localhost:8000/api/v1/movies/${id}/reviews`, rating, {
+      await axios.post(`https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/${id}/reviews`, rating, {
         withCredentials: true
       });
   

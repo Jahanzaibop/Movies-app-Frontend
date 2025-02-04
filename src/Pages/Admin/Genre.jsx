@@ -11,7 +11,7 @@ const Genre = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/v1/genres/${id}`, {
+      await axios.delete(`https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/genres/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },

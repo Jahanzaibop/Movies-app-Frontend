@@ -29,7 +29,7 @@ export default function  UserState ({children}) {
     const logOut = async () =>{
 
         try{
-            await axios.post('http://localhost:8000/api/v1/users/logout')
+            await axios.post('https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/users/logout')
             setCurrentUser(null);
         }
 

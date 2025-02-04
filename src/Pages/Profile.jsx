@@ -36,7 +36,7 @@ const Profile = () => {
 
     try {
       const response = await axios.put(
-          'http://localhost:8000/api/v1/users/profile',
+          'https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/users/profile',
           { username, email , password }, // Exclude password temporarily
           { withCredentials: true } // Ensure credentials (cookies) are sent
       );

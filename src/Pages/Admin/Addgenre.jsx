@@ -38,7 +38,7 @@ const Addgenre = () => {
 
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/v1/genres",
+      "https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/genres",
       input,
       {
         headers: {

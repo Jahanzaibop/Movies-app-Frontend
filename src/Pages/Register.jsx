@@ -34,7 +34,7 @@ const handleClick = async e =>{
 
     try{
     
-    await axios.post("http://localhost:8000/api/v1/users" , user);
+    await axios.post("https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/users" , user);
     toast.success("User Has Been Registered Sucessfully")
     setTimeout(()=> navigate('/login'), 1500)
     

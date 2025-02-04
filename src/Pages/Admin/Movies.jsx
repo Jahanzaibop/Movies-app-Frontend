@@ -16,7 +16,7 @@ const Movies = () => {
 
   try{
    
-     await axios.delete(`http://localhost:8000/api/v1/movies/delete-movie/${id}` ,   {
+     await axios.delete(`https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/delete-movie/${id}` ,   {
       headers: {
         "Content-Type": "application/json",
       },

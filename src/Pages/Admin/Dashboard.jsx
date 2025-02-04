@@ -16,7 +16,7 @@ const Dashboard = () => {
    const fetchData = async () => {
      try {
        // Fetch all movies data
-       const allMoviesRes = await axios.get('http://localhost:8000/api/v1/movies/all-movies');
+       const allMoviesRes = await axios.get('https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/all-movies');
        const movies = allMoviesRes.data;
 
        // Total movies count

@@ -17,7 +17,7 @@ export default function MovieState({children}){
     
     try{
 
-        const response = await axios.get('http://localhost:8000/api/v1/genres/all');
+        const response = await axios.get('https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/genres/all');
     
         setGenres(response.data)
 
@@ -40,7 +40,7 @@ const fetchMovies = async()=>{
     
     try{
 
-        const response = await axios.get('http://localhost:8000/api/v1/movies/all-movies');
+        const response = await axios.get('https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/movies/all-movies');
     
         setMovies(response.data)
 
