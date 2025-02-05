@@ -53,7 +53,7 @@ const handleClick = async e =>{
 
  
     return (
-    <div className='mx-auto max-w-[600px] mt-[100px]'>
+    <div className='p-[10px] mx-auto max-w-[600px] mt-[100px]'>
     <ToastContainer/>
       <h1 className=' mb-[20px] text-[30px] font-bold font-sans text-white text-center'>Register</h1>
       <input onChange={handleChange} name="username" className='bg-transparent border text-white placeholder:text-white w-full mb-[10px] p-[5px] rounded-md' type='text' placeholder='Username' />

@@ -52,7 +52,7 @@ const navigate = useNavigate();
 
 
   return (
-    <div className='mx-auto max-w-[600px] mt-[100px]'>
+    <div className='p-[10px] mx-auto max-w-[600px] mt-[100px]'>
       <ToastContainer/>
       
       <h1 className=' mb-[20px] text-[30px] font-bold font-sans text-white text-center'>Login</h1>
