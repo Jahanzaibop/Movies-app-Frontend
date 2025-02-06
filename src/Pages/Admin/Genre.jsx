@@ -11,20 +11,26 @@ const Genre = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/genres/${id}`, {
-       
-        withCredentials: true,
-      });
-
-      // Update the genres list in state after successful deletion
+      const response = await axios.delete(
+        `https://joint-valery-jahanzaib-7a131339.koyeb.app/api/v1/genres/${id}`,
+        {
+          withCredentials: true, // This should send the cookies
+        }
+      );
+  
+      console.log("DELETE Response:", response);
+  
+      // Update genres list after successful deletion
       setGenres(genres.filter((genre) => genre._id !== id));
-
+  
       toast.success("Genre Has Been Deleted");
-
+  
     } catch (err) {
-      console.error(err);
+      console.error("DELETE Error:", err.response || err);
+      toast.error(err.response?.data?.message || "Failed to delete genre");
     }
   };
+  
 
   return (
     <div className="float-left lg:float-none pl-[15px] p-[15px]  lg:pl-[293px] w-[100%] lg:p-[25px] bg-[#000] text-white">
