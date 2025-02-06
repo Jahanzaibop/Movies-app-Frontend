@@ -43,7 +43,7 @@ const Genre = () => {
           <li key={genre._id}>
             {genre.name}{' '}
             <FontAwesomeIcon
-              onClick={() => handleDelete(genre._id)} // Correctly wrap the function in an arrow function
+              onClick={() => handleDelete("67817132b8277a2f430369e2")} // Correctly wrap the function in an arrow function
               className="cursor-pointer"
               icon={faTrash}
             />
