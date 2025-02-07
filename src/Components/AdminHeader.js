@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../Context/userContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle, faArrowRightFromBracket, faBars  } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faArrowRightFromBracket, faBars , faUser  } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -99,6 +99,14 @@ const AdminHeader = () => {
                   {currentuser?.username}
                   <span className="block font-normal text-[14px]">{currentuser?.email}</span>
                 </p>
+              </div>
+
+              <div className="float-left w-full cursor-pointer">
+                <Link to={`/profile/${currentuser._id}`}>
+                <FontAwesomeIcon icon={faUser} className="float-left text-[30px] mt-[10px]" />
+                <p className="float-left ml-[10px] mt-[11px] font-bold">Profile</p>
+                </Link>
+              
               </div>
 
               {/* Logout Button */}
