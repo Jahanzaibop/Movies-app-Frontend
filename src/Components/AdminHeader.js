@@ -90,7 +90,7 @@ const AdminHeader = () => {
           {display && (
             <div
               ref={dropdownRef}
-              className="rounded-md border bg-[#191919] absolute bottom-[0] h-[150px] top-[63px] lg:h-auto lg:[top:initial] right-[55px] lg:right-[-250px] max-w-[250px] w-full p-[10px]"
+              className="rounded-md border bg-[#191919] absolute bottom-[0] h-[200px] top-[63px] lg:h-auto lg:[top:initial] right-[55px] lg:right-[-250px] max-w-[250px] w-full p-[10px]"
             >
               {/* User Info in Dropdown */}
               <div className="float-left w-full border-b pb-[10px] mb-[10px]">
