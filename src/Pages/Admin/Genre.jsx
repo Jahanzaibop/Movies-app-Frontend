@@ -18,7 +18,7 @@ const Genre = () => {
         }
       );
   
-      console.log("DELETE Response:", response);
+     
   
       // Update genres list after successful deletion
       setGenres(genres.filter((genre) => genre._id !== id));
