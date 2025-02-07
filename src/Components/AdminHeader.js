@@ -101,7 +101,7 @@ const AdminHeader = () => {
                 </p>
               </div>
 
-              <div className="float-left w-full cursor-pointer">
+              <div className="float-left w-full cursor-pointer border-b pb-[10px] mb-[10px]">
                 <Link to={`/profile/${currentuser._id}`}>
                 <FontAwesomeIcon icon={faUser} className="float-left text-[30px] mt-[10px]" />
                 <p className="float-left ml-[10px] mt-[11px] font-bold">Profile</p>
